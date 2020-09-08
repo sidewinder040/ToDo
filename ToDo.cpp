@@ -8,7 +8,25 @@ void ToDo::DisplayTodo() {
         << endl;
    cout << "Description:\t" << GetDescription()
         << endl;
-   // ToDo use 'Switch" to get user friendly 'Status' message
+   // Get user friendly 'Status' message
+   string prettyStatus = "";
+   ToDoStatus status = GetStatus();
+   switch (status) {
+       case ToDoStatus::NOT_STARTED : 
+            prettyStatus = "Not Started";
+            break;
+        case ToDoStatus::IN_PROGRESS :
+            prettyStatus = "In Progress";
+            break;
+        case ToDoStatus::COMPLETED :
+            prettyStatus = "Completed";
+            break;
+        default :
+            break;
+   }
+   cout << "Status:\t"
+        << prettyStatus
+        << endl;
 }
 
 ToDo::ToDo()

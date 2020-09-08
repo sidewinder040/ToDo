@@ -2,3 +2,6 @@ todo
 *.o
 Session.vim 
 tags
+*.swp
+.vscode
+
