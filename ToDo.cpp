@@ -37,4 +37,14 @@ ToDo::~ToDo()
 {
 }
 
+ToDo::ToDo(int id, string title, string description,
+            ToDoStatus status) {
+    _ID = id;
+    _Title = title;
+    _Description = description;
+    _Status = status;
+}
+
+
+
 

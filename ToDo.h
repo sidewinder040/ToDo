@@ -31,10 +31,14 @@ public:
 
     // Class Methods
     void DisplayTodo();
-
-    // Contructor / Destructor
+ 
+    // Default Contructor / Destructor
     ToDo();
     ~ToDo();
+    
+    ToDo(int id, string title, string description,
+            ToDoStatus status);
+
 };
 
 
