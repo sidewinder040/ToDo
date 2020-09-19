@@ -9,23 +9,24 @@ void ToDo::DisplayTodo() {
    cout << "Description:\t" << GetDescription()
         << endl;
    // Get user friendly 'Status' message
-   string prettyStatus = "";
-   ToDoStatus status = GetStatus();
-   switch (status) {
-       case ToDoStatus::NOT_STARTED : 
-            prettyStatus = "Not Started";
-            break;
-        case ToDoStatus::IN_PROGRESS :
-            prettyStatus = "In Progress";
-            break;
-        case ToDoStatus::COMPLETED :
-            prettyStatus = "Completed";
-            break;
-        default :
-            break;
-   }
+   // string prettyStatus = "";
+   // ToDoStatus status = GetStatus();
+   // switch (status) {
+   //     case ToDoStatus::NOT_STARTED : 
+   //          prettyStatus = "Not Started";
+   //          break;
+   //      case ToDoStatus::IN_PROGRESS :
+   //          prettyStatus = "In Progress";
+   //          break;
+   //      case ToDoStatus::COMPLETED :
+   //          prettyStatus = "Completed";
+   //          break;
+   //      default :
+   //          break;
+   // }
    cout << "Status:\t"
-        << prettyStatus
+        // << prettyStatus
+        << PretifiyStatus()
         << endl;
 }
 
@@ -43,6 +44,26 @@ ToDo::ToDo(int id, string title, string description,
     _Title = title;
     _Description = description;
     _Status = status;
+}
+    
+// Obtain user-friendly status string
+string ToDo::PretifiyStatus() {
+   string prettyStatus = "";
+   ToDoStatus status = GetStatus();
+   switch (status) {
+       case ToDoStatus::NOT_STARTED : 
+            prettyStatus = "Not Started";
+            break;
+        case ToDoStatus::IN_PROGRESS :
+            prettyStatus = "In Progress";
+            break;
+        case ToDoStatus::COMPLETED :
+            prettyStatus = "Completed";
+            break;
+        default :
+            break;
+   }
+   return prettyStatus;
 }
 
 
