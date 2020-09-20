@@ -2,13 +2,12 @@
 #include "ToDo.h"
 
 int main(int argc, char* argv[]) {
+    cout << "ToDo List\n"
+         << "---------"
+         << endl;
     ToDo newItem(1, "My Item", 
             "Describing my item",
             ToDoStatus::NOT_STARTED);
-    // newItem.SetTitle ("My Item");
-    // newItem.SetDescription("Describing my item");
-    // newItem.SetID (1);
-    // newItem.SetStatus(ToDoStatus::NOT_STARTED);
     newItem.DisplayTodo();
 
     // Test overloaded constructor
