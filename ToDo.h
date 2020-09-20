@@ -12,6 +12,10 @@ private:
     string _Title;
     string _Description;
     ToDoStatus _Status;
+    
+    // Obtain user-friendly status string
+    string PretifiyStatus();
+
 public:
     // Title Accessors 
     void SetTitle (string title) { _Title = title; }; 
@@ -31,10 +35,15 @@ public:
 
     // Class Methods
     void DisplayTodo();
-
-    // Contructor / Destructor
+ 
+    // Default Contructor / Destructor
     ToDo();
     ~ToDo();
+    
+    // Overloaded Constructor
+    ToDo(int id, string title, string description,
+            ToDoStatus status);
+
 };
 
 

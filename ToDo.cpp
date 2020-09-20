@@ -1,14 +1,38 @@
 #include "ToDo.h"
 
 void ToDo::DisplayTodo() {
-   cout << "ToDo Item Details..." << endl;
-   cout << "ID:\t" << GetID()
+   // cout << "ToDo Item Details..." << endl;
+   cout << "\nID:\t" << GetID()
         << endl;
    cout << "Title:\t" << GetTitle()
         << endl;
    cout << "Description:\t" << GetDescription()
         << endl;
-   // Get user friendly 'Status' message
+   cout << "Status:\t"
+        << PretifiyStatus()
+        << endl;
+}
+
+ToDo::ToDo()
+{
+}
+
+ToDo::~ToDo()
+{
+}
+
+ToDo::ToDo(int id, string title, string description,
+            ToDoStatus status) {
+    _ID = id;
+    _Title = title;
+    _Description = description;
+    _Status = status;
+    // TODO: ID and Status should have hard-wired values on creation
+    // eg. A new item should be 'not started' and have the next id index
+}
+    
+// Obtain user-friendly status string
+string ToDo::PretifiyStatus() {
    string prettyStatus = "";
    ToDoStatus status = GetStatus();
    switch (status) {
@@ -24,17 +48,9 @@ void ToDo::DisplayTodo() {
         default :
             break;
    }
-   cout << "Status:\t"
-        << prettyStatus
-        << endl;
+   return prettyStatus;
 }
 
-ToDo::ToDo()
-{
-}
 
-ToDo::~ToDo()
-{
-}
 
 
