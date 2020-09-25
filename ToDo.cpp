@@ -1,3 +1,4 @@
+#pragma once
 #include "ToDo.h"
 
 void ToDo::DisplayTodo() {
