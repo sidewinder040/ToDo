@@ -33,6 +33,9 @@ public:
     void SetStatus (ToDoStatus status) { _Status = status; };
     ToDoStatus GetStatus() { return _Status; };
 
+    // Status Updaters and return pretified status
+    string StatusSetStarted();
+
     // Class Methods
     void DisplayTodo();
  

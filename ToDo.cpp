@@ -1,5 +1,11 @@
 #include "ToDo.h"
 
+// Status Updaters
+string ToDo::StatusSetStarted() {
+    _Status = ToDoStatus::IN_PROGRESS;
+    return PretifiyStatus();
+}
+
 void ToDo::DisplayTodo() {
    // cout << "ToDo Item Details..." << endl;
    cout << "\nID:\t" << GetID()
