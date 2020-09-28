@@ -41,8 +41,7 @@ public:
     ~ToDo();
     
     // Overloaded Constructor
-    ToDo(int id, string title, string description,
-            ToDoStatus status);
+    ToDo(int id, string title, string description);
 
 };
 

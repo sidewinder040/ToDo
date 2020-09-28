@@ -1,4 +1,3 @@
-#pragma once
 #include "ToDo.h"
 
 void ToDo::DisplayTodo() {
@@ -22,14 +21,11 @@ ToDo::~ToDo()
 {
 }
 
-ToDo::ToDo(int id, string title, string description,
-            ToDoStatus status) {
+ToDo::ToDo(int id, string title, string description) {
     _ID = id;
     _Title = title;
     _Description = description;
-    _Status = status;
-    // TODO: ID and Status should have hard-wired values on creation
-    // eg. A new item should be 'not started' and have the next id index
+    _Status = ToDoStatus::NOT_STARTED; // Not Started by default
 }
     
 // Obtain user-friendly status string
