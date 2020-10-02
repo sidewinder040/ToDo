@@ -36,6 +36,8 @@ public:
     // Status Updaters and return pretified status
     string StatusSetStarted();
 
+    string StatusSetCompleted();
+
     // Class Methods
     void DisplayTodo();
  

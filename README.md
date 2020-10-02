@@ -7,7 +7,9 @@ Something along the lines of Gentoo Linux's 'news' application, which uses comma
 A C++ project with a ToDo class
 
 - [x] Create a ToDo class - to represent an item to do.
-- [ ] Function to change status, e.g started or completed
+- [x] Function to change status, e.g started or completed
+// Let's display completed tacout << "show completed task..." << endl;
+newItem2.DisplayTodo();
 - [x] Create an Enum to control item status
 - [x] Todo Overloaded Constructor
 - [ ] User an Items class to store the ToDo items.
