@@ -13,9 +13,19 @@ int main(int argc, char* argv[]) {
     ToDo newItem2(2, "Another Todo", "Blah Blah Blah");
     newItem2.DisplayTodo();
 
+    cout << "\nChanging Task Status..." << endl;
     // Start second task and display again
     cout << "Starting Second task - status is now: "
          << newItem2.StatusSetStarted() // Set to 'In progress'
          << endl;
+
+    // Complete second task and display again
+    cout << "Setting Second task to completed"
+         << "Second task Status: "
+         << newItem2.StatusSetCompleted()
+         << endl << endl;
+    // Let's display completed task
+    cout << "show completed task..." << endl;
+    newItem2.DisplayTodo();
     return 0;
 }

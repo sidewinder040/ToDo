@@ -6,15 +6,20 @@ string ToDo::StatusSetStarted() {
     return PretifiyStatus();
 }
 
+string ToDo::StatusSetCompleted() {
+    _Status = ToDoStatus::COMPLETED;
+    return PretifiyStatus();
+}
+
 void ToDo::DisplayTodo() {
    // cout << "ToDo Item Details..." << endl;
-   cout << "\nID:\t" << GetID()
+   cout << "\nID:\t\t" << GetID()
         << endl;
-   cout << "Title:\t" << GetTitle()
+   cout << "Title:\t\t" << GetTitle()
         << endl;
    cout << "Description:\t" << GetDescription()
         << endl;
-   cout << "Status:\t"
+   cout << "Status:\t\t"
         << PretifiyStatus()
         << endl;
 }
