@@ -33,6 +33,11 @@ public:
     void SetStatus (ToDoStatus status) { _Status = status; };
     ToDoStatus GetStatus() { return _Status; };
 
+    // Status Updaters and return pretified status
+    string StatusSetStarted();
+
+    string StatusSetCompleted();
+
     // Class Methods
     void DisplayTodo();
  
@@ -41,8 +46,12 @@ public:
     ~ToDo();
     
     // Overloaded Constructor
+<<<<<<< HEAD
     ToDo(int id, string title, string description,
             ToDoStatus status);
+=======
+    ToDo(int id, string title, string description);
+>>>>>>> vector
 
 };
 
