@@ -46,13 +46,7 @@ public:
     ~ToDo();
     
     // Overloaded Constructor
-<<<<<<< HEAD
-    ToDo(int id, string title, string description,
-            ToDoStatus status);
-=======
     ToDo(int id, string title, string description);
->>>>>>> vector
-
 };
 
 

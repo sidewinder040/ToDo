@@ -7,15 +7,6 @@ int main(int argc, char* argv[]) {
          << "---------"
          << endl;
     ToDo newItem(1, "My Item", 
-<<<<<<< HEAD
-            "Describing my item",
-            ToDoStatus::NOT_STARTED);
-    newItem.DisplayTodo();
-
-    // Test overloaded constructor
-    ToDo newItem2(2, "Another Todo", "Blah Blah Blah", ToDoStatus::NOT_STARTED);
-    newItem2.DisplayTodo();
-=======
             "Describing my item");
     TodoVector::AddItem(newItem);
 
@@ -35,6 +26,5 @@ int main(int argc, char* argv[]) {
 
     // list all Tasks
     TodoVector::ListItems();
->>>>>>> vector
     return 0;
 }
