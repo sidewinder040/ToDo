@@ -12,7 +12,7 @@ A C++ project with a ToDo class
 newItem2.DisplayTodo();
 - [x] Create an Enum to control item status
 - [x] Todo Overloaded Constructor
-- [ ] User an Items class to store the ToDo items.
+- [x] User a static vector class to store the ToDo items.
 
 # Next steps
 With todo class, add code to create a new item.

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ToDo.h"
+#include "TodoVector.h"
 
 int main(int argc, char* argv[]) {
     cout << "ToDo List\n"
@@ -7,25 +8,23 @@ int main(int argc, char* argv[]) {
          << endl;
     ToDo newItem(1, "My Item", 
             "Describing my item");
-    newItem.DisplayTodo();
+    TodoVector::AddItem(newItem);
 
-    // Test overloaded constructor
     ToDo newItem2(2, "Another Todo", "Blah Blah Blah");
-    newItem2.DisplayTodo();
+    TodoVector::AddItem(newItem2);
 
-    cout << "\nChanging Task Status..." << endl;
     // Start second task and display again
-    cout << "Starting Second task - status is now: "
-         << newItem2.StatusSetStarted() // Set to 'In progress'
-         << endl;
+    // cout << "Starting Second task - status is now: "
+    //      << newItem2.StatusSetStarted() // Set to 'In progress'
+    //      << endl;
 
-    // Complete second task and display again
-    cout << "Setting Second task to completed"
-         << "Second task Status: "
-         << newItem2.StatusSetCompleted()
-         << endl << endl;
-    // Let's display completed task
-    cout << "show completed task..." << endl;
-    newItem2.DisplayTodo();
+    // // Complete second task and display again
+    // cout << "Setting Second task to completed"
+    //      << "Second task Status: "
+    //      << newItem2.StatusSetCompleted()
+    //      << endl << endl;
+
+    // list all Tasks
+    TodoVector::ListItems();
     return 0;
 }
